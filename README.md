@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://github.com/geczy/blog/raw/master/public/static/images/logo.png" width="100" />
+  <img alt="Logo" src="https://github.com/geczy/blog/raw/main/public/static/images/logo.png" width="100" />
 </div>
 
 <h1 align="center">
@@ -20,7 +20,7 @@
 
 </div>
 
-![demo](https://github.com/geczy/blog/raw/master/public/static/images/demo.png)
+![demo](https://github.com/Geczy/blog/raw/main/public/static/images/demo.png)
 
 <div align="center">
 
@@ -182,7 +182,7 @@ Follow the interactive prompt to generate a post with pre-filled front matter.
 
 ## 📊 Google Lighthouse Performance Metrics
 
-![Google Lighthouse Performance Metrics](https://github.com/geczy/blog/raw/master/public/static/images/Google%20Lighthouse%20Performance%20Metrics.png)
+![Google Lighthouse Performance Metrics](https://github.com/geczy/blog/raw/main/public/static/images/Google%20Lighthouse%20Performance%20Metrics.png)
 
 ## 🚀 Deploy
 

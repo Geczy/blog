@@ -64,14 +64,12 @@ export default function SnippetsLayout({ posts, title, initialDisplayPosts = [],
                 <div className="bg-day dark:bg-night relative space-y-2 rounded-2xl p-4">
                   <article>
                     <div>
-                      <h2 className="text-2xl font-bold leading-8 tracking-tight ">
-                        <Link
-                          href={`/snippets/${slug}`}
-                          className="text-gray-900 transition  duration-500 ease-in-out hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-500"
-                        >
-                          {title}
-                        </Link>
-                      </h2>
+                      <Link
+                        href={`/snippets/${slug}`}
+                        className="text-gray-900 transition  duration-500 ease-in-out hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-500"
+                      >
+                        <h2 className="text-2xl font-bold leading-8 tracking-tight ">{title}</h2>
+                      </Link>
                       <div className="prose prose-base max-w-none text-gray-500 dark:text-gray-400 sm:prose-lg">
                         {summary}
                       </div>

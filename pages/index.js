@@ -186,14 +186,14 @@ export default function Home({ posts }) {
                       <div className="space-y-5 xl:col-span-3">
                         <div className="space-y-1">
                           <div className="flex flex-col justify-between md:flex-row">
-                            <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                              <Link
-                                href={`/blog/${slug}`}
-                                className="text-gray-900 transition duration-500 ease-in-out hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-500"
-                              >
+                            <Link
+                              href={`/blog/${slug}`}
+                              className="text-gray-900 transition duration-500 ease-in-out hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-500"
+                            >
+                              <h2 className="text-2xl font-bold leading-8 tracking-tight">
                                 {title}
-                              </Link>
-                            </h2>
+                              </h2>
+                            </Link>
                             <p className="mt-1 mb-4 w-32 text-left text-gray-500 md:mb-0 md:text-right">
                               <ViewCounter slug={slug} blogPage={false} />
                             </p>
