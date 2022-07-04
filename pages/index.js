@@ -7,6 +7,7 @@ import formatDate from '@/lib/utils/formatDate'
 import { RoughNotation } from 'react-rough-notation'
 import NewsletterForm from '@/components/NewsletterForm'
 import ViewCounter from '@/components/ViewCounter'
+import { useRouter } from 'next/router'
 
 const MAX_DISPLAY = 3
 
@@ -17,6 +18,8 @@ export async function getStaticProps() {
 }
 
 export default function Home({ posts }) {
+  const router = useRouter()
+
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
@@ -169,10 +172,10 @@ export default function Home({ posts }) {
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
             const { slug, date, title, summary, tags } = frontMatter
             return (
-              <Link
-                href={`/blog/${slug}`}
+              <div
+                onClick={() => router.push(`/blog/${slug}`)}
                 key={slug}
-                className="group flex bg-transparent bg-opacity-20 px-2 transition duration-100 hover:scale-105 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800"
+                className="cursor-pointer group flex bg-transparent bg-opacity-20 px-2 transition duration-100 hover:scale-105 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800"
               >
                 <li className="py-8 px-4">
                   <article>
@@ -220,7 +223,7 @@ export default function Home({ posts }) {
                     </div>
                   </article>
                 </li>
-              </Link>
+              </div>
             )
           })}
         </ul>
