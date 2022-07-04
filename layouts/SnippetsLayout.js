@@ -4,8 +4,11 @@ import siteMetadata from '@/data/siteMetadata'
 import { useState } from 'react'
 import Pagination from '@/components/Pagination'
 import formatDate from '@/lib/utils/formatDate'
+import { useRouter } from 'next/router'
 
 export default function SnippetsLayout({ posts, title, initialDisplayPosts = [], pagination }) {
+  const router = useRouter()
+
   const [searchValue, setSearchValue] = useState('')
   const filteredBlogPosts = posts.filter((frontMatter) => {
     const searchContent = frontMatter.title + frontMatter.summary + frontMatter.tags.join(' ')
@@ -52,9 +55,9 @@ export default function SnippetsLayout({ posts, title, initialDisplayPosts = [],
           {displayPosts.map((frontMatter) => {
             const { slug, date, title, summary, tags } = frontMatter
             return (
-              <Link
+              <div
                 key={slug}
-                href={`/snippets/${slug}`}
+                onClick={() => router.push(`/snippets/${slug}`)}
                 className="bg-day·dark:bg-night·group group relative z-50 flex transform cursor-pointer flex-wrap rounded-md border border-gray-200 bg-opacity-50 p-px py-px transition duration-300 hover:scale-105 dark:border-gray-700 dark:bg-opacity-50"
               >
                 <div className="absolute bottom-0 left-0 h-1 w-full origin-left scale-x-0 transform bg-primary-500 duration-300 group-hover:scale-x-100" />
@@ -82,7 +85,7 @@ export default function SnippetsLayout({ posts, title, initialDisplayPosts = [],
                     </div>
                   </article>
                 </div>
-              </Link>
+              </div>
             )
           })}
         </div>

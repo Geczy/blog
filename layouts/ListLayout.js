@@ -5,8 +5,11 @@ import { useState } from 'react'
 import Pagination from '@/components/Pagination'
 import formatDate from '@/lib/utils/formatDate'
 import ViewCounter from '@/components/ViewCounter'
+import { useRouter } from 'next/router'
 
 export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }) {
+  const router = useRouter()
+
   const [searchValue, setSearchValue] = useState('')
   const filteredBlogPosts = posts.filter((frontMatter) => {
     const searchContent = frontMatter.title + frontMatter.summary + frontMatter.tags.join(' ')
@@ -53,10 +56,10 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
           {displayPosts.map((frontMatter) => {
             const { slug, date, title, summary, tags } = frontMatter
             return (
-              <Link
-                href={`/blog/${slug}`}
+              <div
+                onClick={() => router.push(`/blog/${slug}`)}
                 key={slug}
-                className="group flex bg-transparent bg-opacity-20 px-2 transition duration-100 hover:scale-105 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800"
+                className="cursor-pointer group flex bg-transparent bg-opacity-20 px-2 transition duration-100 hover:scale-105 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800"
               >
                 <li key={slug} className="py-6 px-4">
                   <article className="space-y-2 bg-transparent bg-opacity-20 p-2 transition duration-200 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
@@ -69,12 +72,9 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                     <div className="space-y-5 xl:col-span-3">
                       <div className="space-y-1">
                         <div className="flex flex-col justify-between md:flex-row">
-                          <Link
-                            href={`/blog/${slug}`}
-                            className="text-gray-900 transition duration-500 ease-in-out hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-500"
-                          >
+                          <span className="text-gray-900 transition duration-500 ease-in-out hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-500">
                             <h2 className="text-2xl font-bold leading-8 tracking-tight">{title}</h2>
-                          </Link>
+                          </span>
                           <p className="mt-1 mb-4 w-32 text-left text-gray-500 md:mb-0 md:text-right">
                             <ViewCounter slug={slug} blogPage={false} />
                           </p>
@@ -91,7 +91,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                     </div>
                   </article>
                 </li>
-              </Link>
+              </div>
             )
           })}
         </ul>
