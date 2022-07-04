@@ -1,19 +1,23 @@
 const projectsData = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
+    title: 'Focusmate Autopilot',
+    description: `Instant MD is an Investigation, Medication and Chief complaint recognition application using Natural Language Processing. 🏆 Winner of the HealthCare Track at the MINeD Hackathon.`,
+    imgSrc: '',
+    href: 'https://chrome.google.com/webstore/detail/autopilot-for-focusmate/nkahjjlhdjkcecnhjcjmjnkbjdolklfa',
+    github: 'https://github.com/geczy/focusmate-autopilot',
+    tech1: 'Babel',
+    tech2: 'Webpack',
+    tech3: 'Javascript',
   },
   {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
+    title: 'Tinder Autopilot',
+    description: `Don't waste any more time doing manual tasks on Tinder. Autopilot will do it for you.    `,
+    imgSrc: '',
+    href: 'https://chrome.google.com/webstore/detail/autopilot-for-tinder/bfpgbjekakfijondlfloonhdkcjlhehg',
+    github: 'https://github.com/geczy/tinder-autopilot',
+    tech1: 'Babel',
+    tech2: 'Webpack',
+    tech3: 'Javascript',
   },
 ]
 

@@ -5,6 +5,7 @@ tags: ['hello']
 draft: true
 summary:
 images: []
+layout: PostSimple
 ---
 
 Draft post which should not display
