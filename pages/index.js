@@ -31,7 +31,7 @@ export default function Home({ posts }) {
               <span className="text-primary-color-500 dark:text-primary-color-dark-500">Matt</span>
             </h1>
             <h2 className="prose pt-5 text-lg text-gray-600 dark:text-gray-300">
-              {`Welcome to ${siteMetadata.description}. Welcome to my personal blog where I share my musings. I am a Software Engineer passionate about frontend tech, building pipelines and automation. In my free time, I like developing `}
+              {`Welcome to ${siteMetadata.description}. I am a Software Engineer passionate about frontend tech, building pipelines and automation. In my free time, I like developing `}
               <Link href="/projects" className="special-underline no-underline">
                 side projects
               </Link>
