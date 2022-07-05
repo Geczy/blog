@@ -56,42 +56,40 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
           {displayPosts.map((frontMatter) => {
             const { slug, date, title, summary, tags } = frontMatter
             return (
-              <div
+              <li
                 onClick={() => router.push(`/blog/${slug}`)}
                 key={slug}
                 className="cursor-pointer group flex bg-transparent bg-opacity-20 px-2 transition duration-100 hover:scale-105 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800"
               >
-                <li key={slug} className="py-6 px-4">
-                  <article className="space-y-2 bg-transparent bg-opacity-20 p-2 transition duration-200 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                    <dl>
-                      <dt className="sr-only">Published on</dt>
-                      <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                        <time dateTime={date}>{formatDate(date)}</time>
-                      </dd>
-                    </dl>
-                    <div className="space-y-5 xl:col-span-3">
-                      <div className="space-y-1">
-                        <div className="flex flex-col justify-between md:flex-row">
-                          <span className="text-gray-900 transition duration-500 ease-in-out hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-500">
-                            <h2 className="text-2xl font-bold leading-8 tracking-tight">{title}</h2>
-                          </span>
-                          <p className="mt-1 mb-4 w-32 text-left text-gray-500 md:mb-0 md:text-right">
-                            <ViewCounter slug={slug} blogPage={false} />
-                          </p>
-                        </div>
-                        <div className="flex flex-wrap">
-                          {tags.map((tag) => (
-                            <Tag key={tag} text={tag} />
-                          ))}
-                        </div>
-                        <div className="prose max-w-none pt-5 text-gray-500 dark:text-gray-400">
-                          {summary}
-                        </div>
+                <article className="space-y-2 bg-transparent bg-opacity-20 p-2 transition duration-200 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+                  <dl>
+                    <dt className="sr-only">Published on</dt>
+                    <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                      <time dateTime={date}>{formatDate(date)}</time>
+                    </dd>
+                  </dl>
+                  <div className="space-y-5 xl:col-span-3">
+                    <div className="space-y-1">
+                      <div className="flex flex-col justify-between md:flex-row">
+                        <span className="text-gray-900 transition duration-500 ease-in-out hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-500">
+                          <h2 className="text-2xl font-bold leading-8 tracking-tight">{title}</h2>
+                        </span>
+                        <p className="mt-1 mb-4 w-32 text-left text-gray-500 md:mb-0 md:text-right">
+                          <ViewCounter slug={slug} blogPage={false} />
+                        </p>
+                      </div>
+                      <div className="flex flex-wrap">
+                        {tags.map((tag) => (
+                          <Tag key={tag} text={tag} />
+                        ))}
+                      </div>
+                      <div className="prose max-w-none pt-5 text-gray-500 dark:text-gray-400">
+                        {summary}
                       </div>
                     </div>
-                  </article>
-                </li>
-              </div>
+                  </div>
+                </article>
+              </li>
             )
           })}
         </ul>

@@ -50,7 +50,7 @@ export default function Home({ posts }) {
                 color="#DE1D8D"
                 animationDelay={1000}
                 animationDuration={4000}
-                className="text-slate-200"
+                className="text-slate-100"
               >
                 thoughts, reflections & everything&nbsp;
               </RoughNotation>
@@ -65,7 +65,7 @@ export default function Home({ posts }) {
                 color="#DE1D8D"
                 animationDelay={1500}
                 animationDuration={4000}
-                className="text-slate-200"
+                className="text-slate-100"
               >
                 thoughts, reflections & everything&nbsp;
               </RoughNotation>
@@ -172,45 +172,42 @@ export default function Home({ posts }) {
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
             const { slug, date, title, summary, tags } = frontMatter
             return (
-              <div
+              <li
                 onClick={() => router.push(`/blog/${slug}`)}
                 key={slug}
                 className="cursor-pointer group flex bg-transparent bg-opacity-20 px-2 transition duration-100 hover:scale-105 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800"
               >
-                <li className="py-8 px-4">
-                  <article>
-                    <div className="space-y-2 bg-transparent bg-opacity-20 p-2 transition duration-200 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                      <dl>
-                        <dt className="sr-only">Published on</dt>
-                        <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                          <time dateTime={date}>{formatDate(date)}</time>
-                        </dd>
-                      </dl>
-                      <div className="space-y-5 xl:col-span-3">
-                        <div className="space-y-1">
-                          <div className="flex flex-col justify-between md:flex-row">
-                            <Link
-                              href={`/blog/${slug}`}
-                              className="text-gray-900 transition duration-500 ease-in-out hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-500"
-                            >
-                              <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                                {title}
-                              </h2>
-                            </Link>
-                            <p className="mt-1 mb-4 w-32 text-left text-gray-500 md:mb-0 md:text-right">
-                              <ViewCounter slug={slug} blogPage={false} />
-                            </p>
-                          </div>
-                          <div className="flex flex-wrap">
-                            {tags.map((tag) => (
-                              <Tag key={tag} text={tag} />
-                            ))}
-                          </div>
-                          <div className="prose max-w-none pt-5 text-gray-500 dark:text-gray-400">
-                            {summary}
-                          </div>
+                <article className="py-8 px-4">
+                  <div className="space-y-2 bg-transparent bg-opacity-20 p-2 transition duration-200 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+                    <dl>
+                      <dt className="sr-only">Published on</dt>
+                      <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                        <time dateTime={date}>{formatDate(date)}</time>
+                      </dd>
+                    </dl>
+                    <div className="space-y-5 xl:col-span-3">
+                      <div className="space-y-1">
+                        <div className="flex flex-col justify-between md:flex-row">
+                          <Link
+                            href={`/blog/${slug}`}
+                            className="text-gray-900 transition duration-500 ease-in-out hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-500"
+                          >
+                            <h2 className="text-2xl font-bold leading-8 tracking-tight">{title}</h2>
+                          </Link>
+                          <p className="mt-1 mb-4 w-32 text-left text-gray-500 md:mb-0 md:text-right">
+                            <ViewCounter slug={slug} blogPage={false} />
+                          </p>
                         </div>
-                        {/* <div className="text-base font-medium leading-6">
+                        <div className="flex flex-wrap">
+                          {tags.map((tag) => (
+                            <Tag key={tag} text={tag} />
+                          ))}
+                        </div>
+                        <div className="prose max-w-none pt-5 text-gray-500 dark:text-gray-400">
+                          {summary}
+                        </div>
+                      </div>
+                      {/* <div className="text-base font-medium leading-6">
                           <Link
                             href={`/blog/${slug}`}
                             className="mt-2 mr-3 rounded-lg border border-primary-500 py-1 px-3 text-sm font-medium uppercase text-primary-500 transition duration-500 ease-in-out hover:bg-primary-500 hover:text-gray-100 dark:hover:text-gray-900"
@@ -219,11 +216,10 @@ export default function Home({ posts }) {
                             Read more &rarr;
                           </Link>
                         </div> */}
-                      </div>
                     </div>
-                  </article>
-                </li>
-              </div>
+                  </div>
+                </article>
+              </li>
             )
           })}
         </ul>
