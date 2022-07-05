@@ -10,7 +10,7 @@ export default function Now() {
         description="What I'm working on now"
         url={siteMetadata.url}
       />
-      <div>
+      <div className="space-y-8">
         <div className="my-2">
           <h3 className="text-lg leading-6 font-medium text-gray-900">
             Where am I and what am I doing?
@@ -35,7 +35,7 @@ export default function Now() {
           </dl>
         </div>
         {/* Work */}
-        <div className="pb-4">
+        <div className="">
           <span>
             I work as a software engineer at{' '}
             <Link
@@ -45,17 +45,17 @@ export default function Now() {
               ABG{' '}
             </Link>
           </span>
-          <span>I'm mostly using technology such as React, Tailwind, Vercel, etc.</span>
+          <span>I&apos;m mostly using technology such as React, Tailwind, Vercel, etc.</span>
         </div>
         <div className="justify-center text-center text-2xl font-medium text-gray-200 dark:text-gray-600">
           &#126;&#126;&#126;
         </div>
 
         {/* Personal life */}
-        <div className="pt-6 space-y-4">
+        <div className="space-y-4">
           <p>
-            I've been slowly building this website, trying to share interesting things with anyone
-            who wants to read it.{' '}
+            I&apos;ve been slowly building this website, trying to share interesting things with
+            anyone who wants to read it.{' '}
             <Link
               href={'https://www.swyx.io/learn-in-public'}
               className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
