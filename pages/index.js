@@ -25,54 +25,7 @@ export default function Home({ posts }) {
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div>
         <div className="mb-12 flex flex-col items-center gap-x-12 xl:flex-row">
-          <div className="pt-6">
-            <h1 className="pb-6 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-              Hi, I am{' '}
-              <span className="text-primary-color-500 dark:text-primary-color-dark-500">Matt</span>
-            </h1>
-            <h2 className="prose pt-5 text-lg text-gray-600 dark:text-gray-300">
-              {`Welcome to ${siteMetadata.description}. I am a Software Engineer passionate about frontend tech, building pipelines and automation. In my free time, I like developing `}
-              <Link href="/projects" className="special-underline no-underline">
-                side projects
-              </Link>
-              {' and '}
-              <Link href="/blog" className="special-underline no-underline">
-                blogging
-              </Link>
-              {' about them.'}
-            </h2>
-            <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 sm:block md:hidden lg:hidden">
-              This is my place for{' '}
-              <RoughNotation
-                animate="true"
-                type="box"
-                show={true}
-                color="#DE1D8D"
-                animationDelay={1000}
-                animationDuration={4000}
-                className="text-slate-100"
-              >
-                thoughts, reflections & everything&nbsp;
-              </RoughNotation>
-              in between. Have a good read!
-            </p>
-            <p className="hidden pt-10 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
-              This is my place for{' '}
-              <RoughNotation
-                animate="true"
-                type="highlight"
-                show={true}
-                color="#DE1D8D"
-                animationDelay={1500}
-                animationDuration={4000}
-                className="text-slate-100"
-              >
-                thoughts, reflections & everything&nbsp;
-              </RoughNotation>
-              in between. Have a good read!
-            </p>
-          </div>
-          {/* <div className="h-content sm:h-content-sm flex flex-col justify-around">
+          <div className="h-content sm:h-content-sm flex flex-col justify-around">
             <h1 className="sm:text-8.5xl tracking-tightest my-28 select-none text-center text-6xl font-extrabold leading-none sm:my-10">
               <span
                 data-content="Blog."
@@ -99,7 +52,51 @@ export default function Home({ posts }) {
                 </span>
               </span>
             </h1>
-          </div> */}
+          </div>
+          <div className="pt-6">
+            <h2 className="prose pt-5 text-lg text-gray-600 dark:text-gray-300">
+              Welcome to {siteMetadata.description}. I am a Software Engineer passionate about
+              frontend tech, building pipelines and automation. In my free time, I like developing
+              <Link href="/projects" className="special-underline no-underline">
+                side projects
+              </Link>{' '}
+              and
+              <Link href="/blog" className="special-underline no-underline">
+                blogging
+              </Link>{' '}
+              about them.
+            </h2>
+            <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 sm:block md:hidden lg:hidden">
+              This is my place for{' '}
+              <RoughNotation
+                animate="true"
+                type="box"
+                show={true}
+                color="#DE1D8D"
+                animationDelay={1000}
+                animationDuration={4000}
+                className="text-gray-600 dark:text-gray-300"
+              >
+                thoughts, reflections & everything
+              </RoughNotation>
+              in between. Have a good read!
+            </p>
+            <p className="hidden pt-10 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
+              This is my place for{' '}
+              <RoughNotation
+                animate="true"
+                type="highlight"
+                show={true}
+                color="#DE1D8D"
+                animationDelay={1500}
+                animationDuration={4000}
+                className="text-slate-100"
+              >
+                thoughts, reflections & everything&nbsp;
+              </RoughNotation>
+              in between. Have a good read!
+            </p>
+          </div>
           <div className="flex items-center justify-center">
             <div className="grid grid-cols-1 grid-rows-3 gap-8 py-12">
               <div className="my-2 grid items-start gap-8">
