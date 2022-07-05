@@ -5,9 +5,9 @@ import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
 import { RoughNotation } from 'react-rough-notation'
-import NewsletterForm from '@/components/NewsletterForm'
 import ViewCounter from '@/components/ViewCounter'
 import { useRouter } from 'next/router'
+import NewsletterForm from '@/components/NewsletterForm'
 
 const MAX_DISPLAY = 3
 
@@ -23,78 +23,54 @@ export default function Home({ posts }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <div>
-        <div className="mb-12 flex flex-col items-center gap-x-12 xl:flex-row">
-          <div className="h-content sm:h-content-sm flex flex-col justify-around">
-            <h1 className="sm:text-8.5xl tracking-tightest my-28 select-none text-center text-6xl font-extrabold leading-none sm:my-10">
-              <span
-                data-content="Blog."
-                className="relative block before:absolute before:top-0 before:bottom-0 before:left-0 before:block before:w-full before:animate-gradient-background-1 before:px-2 before:text-center before:text-black before:content-[attr(data-content)] dark:before:text-white dark:before:content-[attr(data-content)]"
-              >
-                <span className="animate-gradient-foreground-1 bg-gradient-to-br from-gradient-1-start to-gradient-1-end bg-clip-text px-2 text-transparent">
-                  Blog.
+      <div className="space-y-12">
+        <div className="flex flex-col items-center gap-x-12 xl:flex-row">
+          <div className="space-y-6 text-slate-600 dark:text-slate-300">
+            <div className="h-content sm:h-content-sm flex flex-col justify-around">
+              <h1 className="sm:text-8.5xl tracking-tightest my-28 select-none text-center text-6xl font-extrabold leading-none sm:my-10">
+                <span
+                  data-content="Blog."
+                  className="relative block before:absolute before:top-0 before:bottom-0 before:left-0 before:block before:w-full before:animate-gradient-background-1 before:px-2 before:text-center before:text-black before:content-[attr(data-content)] dark:before:text-white dark:before:content-[attr(data-content)]"
+                >
+                  <span className="animate-gradient-foreground-1 bg-gradient-to-br from-gradient-1-start to-gradient-1-end bg-clip-text px-2 text-transparent">
+                    Blog.
+                  </span>
                 </span>
-              </span>
-              <span
-                data-content="Coding."
-                className="relative block before:absolute before:top-0 before:bottom-0 before:left-0 before:block before:w-full before:animate-gradient-background-2 before:px-2 before:text-center before:text-black before:content-[attr(data-content)] dark:before:text-white dark:before:content-[attr(data-content)]"
-              >
-                <span className="animate-gradient-foreground-2 bg-gradient-to-br from-gradient-2-start to-gradient-2-end bg-clip-text px-2 text-transparent">
-                  Coding.
+                <span
+                  data-content="Coding."
+                  className="relative block before:absolute before:top-0 before:bottom-0 before:left-0 before:block before:w-full before:animate-gradient-background-2 before:px-2 before:text-center before:text-black before:content-[attr(data-content)] dark:before:text-white dark:before:content-[attr(data-content)]"
+                >
+                  <span className="animate-gradient-foreground-2 bg-gradient-to-br from-gradient-2-start to-gradient-2-end bg-clip-text px-2 text-transparent">
+                    Coding.
+                  </span>
                 </span>
-              </span>
-              <span
-                data-content="Portfolio."
-                className="relative block before:absolute before:top-0 before:bottom-0 before:left-0 before:block before:w-full before:animate-gradient-background-3 before:px-2 before:text-center before:text-black before:content-[attr(data-content)] dark:before:text-white dark:before:content-[attr(data-content)]"
-              >
-                <span className="animate-gradient-foreground-3 bg-gradient-to-br from-gradient-3-start to-gradient-3-end bg-clip-text px-2 text-transparent">
-                  Portfolio.
+                <span
+                  data-content="Portfolio."
+                  className="relative block before:absolute before:top-0 before:bottom-0 before:left-0 before:block before:w-full before:animate-gradient-background-3 before:px-2 before:text-center before:text-black before:content-[attr(data-content)] dark:before:text-white dark:before:content-[attr(data-content)]"
+                >
+                  <span className="animate-gradient-foreground-3 bg-gradient-to-br from-gradient-3-start to-gradient-3-end bg-clip-text px-2 text-transparent">
+                    Portfolio.
+                  </span>
                 </span>
+              </h1>
+            </div>
+
+            <h2 className="prose text-lg space-x-2">
+              <span>
+                Welcome to {siteMetadata.description}. I am a Software Engineer passionate about
+                frontend tech, building pipelines and automation. In my free time, I like developing
               </span>
-            </h1>
-          </div>
-          <div className="pt-6">
-            <h2 className="prose pt-5 text-lg text-gray-600 dark:text-gray-300">
-              Welcome to {siteMetadata.description}. I am a Software Engineer passionate about
-              frontend tech, building pipelines and automation. In my free time, I like developing
               <Link href="/projects" className="special-underline no-underline">
                 side projects
-              </Link>{' '}
-              and
+              </Link>
+              <span>and</span>
               <Link href="/blog" className="special-underline no-underline">
                 blogging
-              </Link>{' '}
-              about them.
+              </Link>
+              <span>about them.</span>
             </h2>
-            <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 sm:block md:hidden lg:hidden">
-              This is my place for{' '}
-              <RoughNotation
-                animate="true"
-                type="box"
-                show={true}
-                color="#DE1D8D"
-                animationDelay={1000}
-                animationDuration={4000}
-                className="text-gray-600 dark:text-gray-300"
-              >
-                thoughts, reflections & everything
-              </RoughNotation>
-              in between. Have a good read!
-            </p>
-            <p className="hidden pt-10 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
-              This is my place for{' '}
-              <RoughNotation
-                animate="true"
-                type="highlight"
-                show={true}
-                color="#DE1D8D"
-                animationDelay={1500}
-                animationDuration={4000}
-                className="text-slate-100"
-              >
-                thoughts, reflections & everything&nbsp;
-              </RoughNotation>
-              in between. Have a good read!
+            <p className="text-lg leading-7">
+              This is my place for thoughts, reflections & everything in between. Have a good read!
             </p>
           </div>
           <div className="flex items-center justify-center">
@@ -160,51 +136,54 @@ export default function Home({ posts }) {
             </div>
           </div>
         </div>
-        <h2 className="flex pb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl md:text-5xl">
-          Latest
-        </h2>
-        <hr className="border-gray-200 dark:border-gray-700" />
-        <ul>
-          {!posts.length && 'No posts found.'}
-          {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-            const { slug, date, title, summary, tags } = frontMatter
-            return (
-              <li
-                onClick={() => router.push(`/blog/${slug}`)}
-                key={slug}
-                className="cursor-pointer group flex bg-transparent bg-opacity-20 px-2 transition duration-100 hover:scale-105 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800"
-              >
-                <article className="py-8 px-4">
-                  <div className="space-y-2 bg-transparent bg-opacity-20 p-2 transition duration-200 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                    <dl>
-                      <dt className="sr-only">Published on</dt>
-                      <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                        <time dateTime={date}>{formatDate(date)}</time>
-                      </dd>
-                    </dl>
-                    <div className="space-y-5 xl:col-span-3">
-                      <div className="space-y-1">
-                        <div className="flex flex-col justify-between md:flex-row">
-                          <Link
-                            href={`/blog/${slug}`}
-                            className="text-gray-900 transition duration-500 ease-in-out hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-500"
-                          >
-                            <h2 className="text-2xl font-bold leading-8 tracking-tight">{title}</h2>
-                          </Link>
-                          <p className="mt-1 mb-4 w-32 text-left text-gray-500 md:mb-0 md:text-right">
-                            <ViewCounter slug={slug} blogPage={false} />
-                          </p>
+        <div>
+          <h2 className="flex pb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl md:text-5xl">
+            Latest
+          </h2>
+          <hr className="border-gray-200 dark:border-gray-700" />
+          <ul>
+            {!posts.length && 'No posts found.'}
+            {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
+              const { slug, date, title, summary, tags } = frontMatter
+              return (
+                <li
+                  onClick={() => router.push(`/blog/${slug}`)}
+                  key={slug}
+                  className="cursor-pointer group flex bg-transparent bg-opacity-20 px-2 transition duration-100 hover:scale-105 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800"
+                >
+                  <article className="py-8 px-4">
+                    <div className="space-y-2 bg-transparent bg-opacity-20 p-2 transition duration-200 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+                      <dl>
+                        <dt className="sr-only">Published on</dt>
+                        <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                          <time dateTime={date}>{formatDate(date)}</time>
+                        </dd>
+                      </dl>
+                      <div className="space-y-5 xl:col-span-3">
+                        <div className="space-y-1">
+                          <div className="flex flex-col justify-between md:flex-row">
+                            <Link
+                              href={`/blog/${slug}`}
+                              className="text-gray-900 transition duration-500 ease-in-out hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-500"
+                            >
+                              <h2 className="text-2xl font-bold leading-8 tracking-tight">
+                                {title}
+                              </h2>
+                            </Link>
+                            <p className="mt-1 mb-4 w-32 text-left text-gray-500 md:mb-0 md:text-right">
+                              <ViewCounter slug={slug} blogPage={false} />
+                            </p>
+                          </div>
+                          <div className="flex flex-wrap">
+                            {tags.map((tag) => (
+                              <Tag key={tag} text={tag} />
+                            ))}
+                          </div>
+                          <div className="prose max-w-none pt-5 text-gray-500 dark:text-gray-400">
+                            {summary}
+                          </div>
                         </div>
-                        <div className="flex flex-wrap">
-                          {tags.map((tag) => (
-                            <Tag key={tag} text={tag} />
-                          ))}
-                        </div>
-                        <div className="prose max-w-none pt-5 text-gray-500 dark:text-gray-400">
-                          {summary}
-                        </div>
-                      </div>
-                      {/* <div className="text-base font-medium leading-6">
+                        {/* <div className="text-base font-medium leading-6">
                           <Link
                             href={`/blog/${slug}`}
                             className="mt-2 mr-3 rounded-lg border border-primary-500 py-1 px-3 text-sm font-medium uppercase text-primary-500 transition duration-500 ease-in-out hover:bg-primary-500 hover:text-gray-100 dark:hover:text-gray-900"
@@ -213,13 +192,14 @@ export default function Home({ posts }) {
                             Read more &rarr;
                           </Link>
                         </div> */}
+                      </div>
                     </div>
-                  </div>
-                </article>
-              </li>
-            )
-          })}
-        </ul>
+                  </article>
+                </li>
+              )
+            })}
+          </ul>
+        </div>
       </div>
       {posts.length > MAX_DISPLAY && (
         <div className="flex justify-end text-base font-medium leading-6">
@@ -233,7 +213,7 @@ export default function Home({ posts }) {
         </div>
       )}
       {siteMetadata.newsletter.provider !== '' && (
-        <div className="flex items-center justify-center pt-4">
+        <div className="flex items-center justify-center">
           <NewsletterForm />
         </div>
       )}

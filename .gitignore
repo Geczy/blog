@@ -13,11 +13,11 @@
 /.next/
 out/
 public/sitemap.xml
-.vercel
 
 # production
 /build
 *.xml
+
 # rss feed
 /public/feed.xml
 
@@ -36,4 +36,5 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
+# vercel
 .vercel
