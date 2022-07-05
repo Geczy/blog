@@ -13,7 +13,7 @@ export default function Uses() {
             Uses
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            Software and hardware collection of things I'm using daily.
+            Software and hardware collection of things I&apos;m using daily.
           </p>
           <div className="mt-5 mb-3 text-xs text-gray-500 dark:text-gray-400">
             Note: This page contains links to buy or download the products. If you click through and

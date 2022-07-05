@@ -158,7 +158,7 @@ export default function AuthorLayout({ children, frontMatter }) {
                     href={'https://github.com/timlrx/tailwind-nextjs-starter-blog'}
                     className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
                   >
-                    Timothy's Next.js and Tailwind CSS template
+                    Timothy&apos;s Next.js and Tailwind CSS template
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -180,7 +180,7 @@ export default function AuthorLayout({ children, frontMatter }) {
                     href={'https://github.com/pycoder2000/blog'}
                     className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
                   >
-                    Parth Desai's fork of the above template
+                    Parth Desai&apos;s fork of the above template
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
