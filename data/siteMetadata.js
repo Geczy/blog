@@ -15,7 +15,6 @@ const siteMetadata = {
   github: 'https://github.com/geczy',
   twitter: 'https://twitter.com/geczy',
   linkedin: 'https://www.linkedin.com/in/gate',
-  website: 'https://mgates.vercel.app',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the

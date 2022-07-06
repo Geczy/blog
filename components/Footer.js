@@ -14,12 +14,12 @@ export default function Footer() {
           <SocialIcon kind="youtube" href={siteMetadata.youtube} size="6" />
           <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size="6" />
           <SocialIcon kind="twitter" href={siteMetadata.twitter} size="6" />
-          <SocialIcon kind="website" href={siteMetadata.website} size="6" />
+          <SocialIcon kind="website" href={siteMetadata.siteUrl} size="6" />
         </div>
         <br />
         <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
           <div>
-            <Link href="https://mgates.vercel.app">{siteMetadata.author}</Link>
+            <Link href="/">{siteMetadata.author}</Link>
           </div>
           <div>{` • `}</div>
           <div>{`© ${new Date().getFullYear()}`}</div>
@@ -57,12 +57,6 @@ export default function Footer() {
           </Link>
           <Link
             className="link-underline hover:text-primary-600 dark:hover:text-primary-600"
-            href="/snippets"
-          >
-            Snippets
-          </Link>
-          <Link
-            className="link-underline hover:text-primary-600 dark:hover:text-primary-600"
             href="/projects"
           >
             Projects
@@ -84,12 +78,6 @@ export default function Footer() {
             href="/uses"
           >
             Uses
-          </Link>
-          <Link
-            className="link-underline hover:text-primary-600 dark:hover:text-primary-600"
-            href="/recommends"
-          >
-            Recommends
           </Link>
         </div>
       </div>

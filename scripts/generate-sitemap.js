@@ -66,4 +66,13 @@ const siteMetadata = require('../data/siteMetadata')
 
   // eslint-disable-next-line no-sync
   fs.writeFileSync('public/sitemap.xml', formatted)
+
+  fs.writeFileSync(
+    'public/robots.txt',
+    `Sitemap: ${siteMetadata.siteUrl}/sitemap.xml
+
+User-agent: *
+Allow: /
+Disallow: /api/*`
+  )
 })()
