@@ -2,8 +2,6 @@ import PageTitle from '@/components/PageTitle'
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/lib/mdx'
 
-const DEFAULT_LAYOUT = 'PostLayout'
-
 export async function getStaticPaths() {
   const posts = getFiles('snippets')
   return {
@@ -39,7 +37,7 @@ export default function Blog({ post, authorDetails, prev, next }) {
     <>
       {frontMatter.draft !== true ? (
         <MDXLayoutRenderer
-          layout={frontMatter.layout || DEFAULT_LAYOUT}
+          layout={frontMatter.layout}
           toc={toc}
           mdxSource={mdxSource}
           frontMatter={frontMatter}
