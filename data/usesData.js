@@ -2,6 +2,7 @@ const usesData = [
   {
     title: 'Windows PC',
     description: `i9-9900K, Z390, 32gb, 660p, RX Vega 64`,
+    href: 'https://pcpartpicker.com/user/Swift/saved/#view=KGsgwP',
   },
   {
     title: 'Raycast',
