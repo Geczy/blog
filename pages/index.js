@@ -55,7 +55,7 @@ export default function Home({ posts }) {
               </h1>
             </div>
 
-            <h2 className="prose text-lg space-x-2">
+            <h2 className="text-lg space-x-2">
               <span>
                 Welcome to {siteMetadata.description}. I am a Software Engineer passionate about
                 frontend tech, building pipelines and automation. In my free time, I like developing

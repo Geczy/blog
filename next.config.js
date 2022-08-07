@@ -62,7 +62,13 @@ module.exports = withBundleAnalyzer({
 
     return config
   },
+  exportTrailingSlash: true,
   reactStrictMode: true,
+  experimental: {
+    images: {
+      unoptimized: true,
+    },
+  },
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   eslint: {
     dirs: ['pages', 'components', 'lib', 'layouts', 'scripts'],
