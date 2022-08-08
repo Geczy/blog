@@ -6,7 +6,7 @@ const siteMetadata = {
   snippets: 'Reuseable code snippets collected by Matt',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://mgates.vercel.app',
+  siteUrl: 'https://mgates.me',
   siteRepo: 'https://github.com/geczy/blog',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',

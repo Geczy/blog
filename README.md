@@ -7,7 +7,7 @@
 </h1>
 
 <p align="center">
-  This is my personal portfolio blog hosted <a href="https://mgates.vercel.app/" target="_blank">here</a> built with <a href="https://nextjs.org/" target="_blank">Next.js</a>, <a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a> and hosted with <a href="https://www.vercel.com/" target="_blank">Vercel</a>.
+  This is my personal portfolio blog hosted <a href="https://mgates.me/" target="_blank">here</a> built with <a href="https://nextjs.org/" target="_blank">Next.js</a>, <a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a> and hosted with <a href="https://www.vercel.com/" target="_blank">Vercel</a>.
 </p>
 
 <p align="center">
@@ -16,7 +16,7 @@
 
 <div align="center">
 
-<a href="https://mgates.vercel.app/" target="blank" >![View Demo](https://img.shields.io/badge/-View%20Demo%20-orange?color=%23DE1D8D&style=for-the-badge)</a> <a href="https://github.com/geczy/blog/issues/new?assignees=&labels=bug&template=bug_report.md&title=">![Report Bug](https://img.shields.io/badge/-Report%20Bug%20-orange?color=%23ee0701&style=for-the-badge)</a> <a href="https://github.com/geczy/blog/issues/new?assignees=&labels=&template=feature_request.md&title=">![Request Feature](https://img.shields.io/badge/-Request%20Feature%20-orange?color=%230e8a16&style=for-the-badge)</a> <a href="https://github.com/geczy/blog/fork">![Fork](https://img.shields.io/github/forks/geczy/blog?color=%23bfe5bf&style=for-the-badge)</a> <img src="https://img.shields.io/github/stars/geczy/blog?color=darkgreen&style=for-the-badge">
+<a href="https://mgates.me/" target="blank" >![View Demo](https://img.shields.io/badge/-View%20Demo%20-orange?color=%23DE1D8D&style=for-the-badge)</a> <a href="https://github.com/geczy/blog/issues/new?assignees=&labels=bug&template=bug_report.md&title=">![Report Bug](https://img.shields.io/badge/-Report%20Bug%20-orange?color=%23ee0701&style=for-the-badge)</a> <a href="https://github.com/geczy/blog/issues/new?assignees=&labels=&template=feature_request.md&title=">![Request Feature](https://img.shields.io/badge/-Request%20Feature%20-orange?color=%230e8a16&style=for-the-badge)</a> <a href="https://github.com/geczy/blog/fork">![Fork](https://img.shields.io/github/forks/geczy/blog?color=%23bfe5bf&style=for-the-badge)</a> <img src="https://img.shields.io/github/stars/geczy/blog?color=darkgreen&style=for-the-badge">
 
 </div>
 
@@ -153,7 +153,7 @@ Follow the interactive prompt to generate a post with pre-filled front matter.
 
 ## 📈 Stats
 
-<img src="https://img.shields.io/website?down_color=red&down_message=offline&style=for-the-badge&up_color=green&up_message=online&url=https%3A%2F%2Fmgates.vercel.app"> <img src="https://img.shields.io/github/repo-size/geczy/blog?style=for-the-badge&color=darkgreen" /> <img src="https://img.shields.io/github/languages/top/geczy/blog?style=for-the-badge" /> <img src="https://img.shields.io/github/commit-activity/m/geczy/blog?style=for-the-badge&color=orange" /> <img src="https://img.shields.io/github/deployments/geczy/blog/Preview%20–%20blog?style=for-the-badge" /> <a href="https://tech-blogs.dev" target="_blank" >![Featured on tech-blogs.dev](https://img.shields.io/badge/Featured-tech--blogs.dev-yellow?style=for-the-badge)</a> <a href="https://makeapullrequest.com" target="blank" >![PRs Welcome](https://img.shields.io/badge/PR-Welcome-brightgreen?style=for-the-badge)</a>
+<img src="https://img.shields.io/website?down_color=red&down_message=offline&style=for-the-badge&up_color=green&up_message=online&url=https%3A%2F%2Fmgates.me"> <img src="https://img.shields.io/github/repo-size/geczy/blog?style=for-the-badge&color=darkgreen" /> <img src="https://img.shields.io/github/languages/top/geczy/blog?style=for-the-badge" /> <img src="https://img.shields.io/github/commit-activity/m/geczy/blog?style=for-the-badge&color=orange" /> <img src="https://img.shields.io/github/deployments/geczy/blog/Preview%20–%20blog?style=for-the-badge" /> <a href="https://tech-blogs.dev" target="_blank" >![Featured on tech-blogs.dev](https://img.shields.io/badge/Featured-tech--blogs.dev-yellow?style=for-the-badge)</a> <a href="https://makeapullrequest.com" target="blank" >![PRs Welcome](https://img.shields.io/badge/PR-Welcome-brightgreen?style=for-the-badge)</a>
 
 ## 🪜 Project structure
 
